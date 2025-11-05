@@ -76,19 +76,19 @@ export default function Home() {
         title: "Fitness Progress Tracker",
         desc: "Track workouts, weight, photos. Next.js + Firebase (Auth + Firestore).",
         link: "/projects/fitness",
-        github: "https://github.com/<your-username>/fitness-progress-tracker",
+        github: "https://github.com/ducatiman007/fitness-progress-tracker",
       },
       {
         title: "URL Shortener",
         desc: "Create short links with click analytics. Next.js API + MongoDB.",
         link: "/projects/url-shortener",
-        github: "https://github.com/<your-username>/url-shortener-next",
+        github: "https://github.com/ducatiman007/url-shortener-next",
       },
       {
         title: "Portfolio Website",
         desc: "My personal site (Next.js + Tailwind), deployed on Vercel.",
         link: "/projects/portfolio",
-        github: "https://github.com/<your-username>/manoj-portfolio",
+        github: "https://github.com/ducatiman007/manoj-portfolio",
       },
     ].map((p) => (
       <div key={p.title} className="rounded-2xl border border-white/10 p-5 bg-white/5 hover:bg-white/10 transition">
