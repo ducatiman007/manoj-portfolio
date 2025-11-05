@@ -67,17 +67,42 @@ export default function Home() {
       </section>
 
       {/* Placeholder sections (we’ll fill later) */}
-      <section id="projects" className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-6 text-[#00ff9d]">Projects</h2>
-        <p className="opacity-70">Coming soon: Fitness Progress Tracker, Social Feed, Portfolio cards.</p>
-      </section>
+     <section id="projects" className="max-w-5xl mx-auto px-6 py-16">
+  <h2 className="text-2xl font-semibold mb-6 text-[#00ff9d]">Projects</h2>
 
-      <section id="about" className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-3 text-[#00ff9d]">About</h2>
-        <p className="opacity-80 leading-relaxed">
-          I’m a full-stack learner focusing on React, Next.js, Firebase/MongoDB, and clean UI with Tailwind.
-        </p>
-      </section>
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      {
+        title: "Fitness Progress Tracker",
+        desc: "Track workouts, weight, photos. Next.js + Firebase (Auth + Firestore).",
+        link: "/projects/fitness",
+        github: "https://github.com/<your-username>/fitness-progress-tracker",
+      },
+      {
+        title: "URL Shortener",
+        desc: "Create short links with click analytics. Next.js API + MongoDB.",
+        link: "/projects/url-shortener",
+        github: "https://github.com/<your-username>/url-shortener-next",
+      },
+      {
+        title: "Portfolio Website",
+        desc: "My personal site (Next.js + Tailwind), deployed on Vercel.",
+        link: "/projects/portfolio",
+        github: "https://github.com/<your-username>/manoj-portfolio",
+      },
+    ].map((p) => (
+      <div key={p.title} className="rounded-2xl border border-white/10 p-5 bg-white/5 hover:bg-white/10 transition">
+        <h3 className="text-lg font-semibold">{p.title}</h3>
+        <p className="opacity-80 text-sm mt-2">{p.desc}</p>
+        <div className="flex gap-3 mt-4">
+          <a href={p.link} className="px-3 py-1.5 rounded-lg bg-[#00ff9d] text-black text-sm font-medium">View</a>
+          <a href={p.github} target="_blank" className="px-3 py-1.5 rounded-lg border border-white/20 text-sm">GitHub</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       <section id="contact" className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-semibold mb-3 text-[#00ff9d]">Contact</h2>
